@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" name="username"/></br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password"/></br>
+
+        <button type="button" onclick="logCredentials()">Log Credentials</button>
+    </form>
+
+    <script>
+        function logCredentials(){
+            var username = document.forms[0].elements.username.value;
+            var password = document.forms[0].elements.password.value;
+
+            console.log("Username:",username);
+            console.log("Password:",password);
+        }
+    </script>
+</body>
+</html>
+
+

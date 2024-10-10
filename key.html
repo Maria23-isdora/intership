@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>key Events</title>
+</head>
+<body>
+    <input type="text"  id="inputField" placeholder="type something...">
+
+
+    <script>
+
+        const inputField=document.getElementById('inputField');
+
+        inputField.onkeydown=()=> console.log('key Down');
+        inputField.onkeypress=()=> console.log('key Press');
+        inputField.onkeyup=()=> console.log('key Up');
+        
+        
+    </script>
+    
+</body>
+</html>

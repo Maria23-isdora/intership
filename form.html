@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>college</title>
+
+    <script>
+
+        function validateForm(){
+       var regno= document.forms["myForm"]["regno"].value;
+       var name= document.forms["myForm"]["name"].value;
+       var subject1= document.forms["myForm"]["subject1"].value;
+       var subject2= document.forms["myForm"]["subject2"].value;
+       var subject3= document.forms["myForm"]["subject3"].value;
+       var marks1= document.forms["myForm"]["marks1"].value;
+       var marks2= document.forms["myForm"]["marks2"].value;
+       var marks3= document.forms["myForm"]["marks3"].value;
+
+       var regnoRegex=/^[a-zA-Z0-9]{1,10}$/;
+       var nameRegex=/^[a-zA-Z]{2,10}$/;
+       var subject1Regex=/^[a-zA-Z]{2,10}$/;
+       var subject2Regex=/^[a-zA-Z]{2,10}$/;
+       var subject3Regex=/^[a-zA-Z]{2,10}$/;
+       var marks1Regex=/^[0-9][0>=100]{0,3}$/;
+    
+       if (!regnoRegex.test(regno)) {
+        alert("pls enter the correct regno")
+        return false;
+       }
+
+       if (!nameRegex.test(name)) {
+        alert ("Invaild Name")
+        return false;
+        
+       }
+
+       if (!subject1Regex.test(subject1)) {
+        alert ("Invaild subject1")
+        return false;
+        
+       }
+       if (!subject2Regex.test(subject2)) {
+        alert ("Invaild subject2")
+        return false;
+        
+       }
+       if (!subject3Regex.test(subject3)) {
+        alert ("Invaild subject3")
+        return false;
+        
+       }
+
+       if (!marks1Regex.test(marks1)) {
+        alert ("Invaild marks")
+        return false;
+        
+       }
+
+
+       
+
+
+    }
+
+    </script>
+</head>
+<body>
+    <form name="myForm" onsubmit="return validateForm()" >
+    <label for="student info">Student info:</label><br><br>
+
+    <label for="regno">Reg No:</label>
+    <input type="text" name="regno" ><br><br>
+    
+
+    
+    <label for="name">Name:</label>
+    <input type="text" name="name" ><br><br>
+
+    <label for="subject1">Subject1:</label>
+    <input type="text" name="subject1" >
+
+    <label for="marks1">Marks1:</label>
+    <input type="text" name="marks1" >
+
+    <label for="subject2">Subject2:</label>
+    <input type="text" name="subject2" >
+
+    <label for="marks2">Marks2:</label>
+    <input type="text" name="marks2" >
+
+    <label for="subject3">Subject3:</label>
+    <input type="text" name="subject3" >
+   
+    <label for="marks3">Marks3:</label>
+    <input type="text" name="marks3" >
+
+    <input type="submit" value="Submit"><br><br>
+
+    </form>
+</body>
+</html>

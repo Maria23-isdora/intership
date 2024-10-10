@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover and Mouseout example</title>
+</head>
+<body>
+    <img src="https://th.bing.com/th/id/OIP.ls2Z6NZx4jFWfbwqxt5YigHaHa?rs=1&pid=ImgDetMain" id="image"
+
+    onmouseover="ChangeImage()"
+    onmouseout="revertImage()">
+
+    <script>
+
+        function ChangeImage(){
+            document.getElementById('image').src='https://th.bing.com/th/id/OIP.ls2Z6NZx4jFWfbwqxt5YigHaHa?rs=1&pid=ImgDetMain';
+
+
+        }
+        function revertImage(){
+            document.getElementById('image').src='https://wallpapercave.com/wp/wp2058252.jpg';
+        }
+    </script>
+
+</body>
+</html>
